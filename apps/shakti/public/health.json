@@ -1,0 +1,5 @@
+{
+  "status": "ok",
+  "service": "shakti-command-center",
+  "note": "Static fallback for hosts without the nginx /health route (see docker/nginx.conf). Confirms the build was deployed, not live backend health."
+}

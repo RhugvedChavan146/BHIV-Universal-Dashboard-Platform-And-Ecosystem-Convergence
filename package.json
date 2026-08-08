@@ -1,0 +1,31 @@
+{
+  "name": "bhiv-dashboard-platform",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=shakti-command-center",
+    "build": "npm run build --workspaces --if-present",
+    "build:packages": "npm run build --workspace=@bhiv/utils --workspace=@bhiv/ui --workspace=@bhiv/dashboard-sdk",
+    "build:shakti": "npm run build --workspace=shakti-command-center",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "npm run test --workspace=shakti-command-center && npm run test --workspace=@bhiv/dashboard-sdk"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.6.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.7.0",
+    "prettier": "^3.4.2",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.62.0"
+  }
+}

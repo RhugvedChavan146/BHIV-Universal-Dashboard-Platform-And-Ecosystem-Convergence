@@ -1,0 +1,1 @@
+export { localStoragePersistence } from "./localStoragePersistence";

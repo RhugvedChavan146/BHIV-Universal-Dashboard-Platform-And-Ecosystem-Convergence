@@ -1,0 +1,22 @@
+services:
+  shakti-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_CONTROL_PLANE_URL: ${VITE_CONTROL_PLANE_URL:-http://127.0.0.1:8009}
+        VITE_BUCKET_SERVICE_URL: ${VITE_BUCKET_SERVICE_URL:-}
+        VITE_PRANA_SERVICE_URL: ${VITE_PRANA_SERVICE_URL:-}
+        VITE_NIYANTRAN_URL: ${VITE_NIYANTRAN_URL:-}
+        VITE_NIYANTRAN_EXECUTION_KEY: ${VITE_NIYANTRAN_EXECUTION_KEY:-}
+        VITE_NIYANTRAN_AUTH_TOKEN: ${VITE_NIYANTRAN_AUTH_TOKEN:-}
+        VITE_INSIGHTFLOW_URL: ${VITE_INSIGHTFLOW_URL:-}
+    ports:
+      - "8080:80"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
