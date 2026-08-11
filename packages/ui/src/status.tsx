@@ -137,12 +137,12 @@ export interface ProgressBarProps {
 export function ProgressBar({ value, tone = "info", className, trackClassName }: ProgressBarProps) {
   const pct = Number.isFinite(value) ? Math.min(100, Math.max(0, value)) : 0;
   return (
-    <div className={cn("h-1.5 bg-slate-700 rounded-full overflow-hidden", trackClassName)}>
-      <div
-        className={cn("h-full rounded-full transition-all", TONE_BAR[tone], className)}
-        style={{ width: `${pct}%` }}
-      />
-    </div>
+   <div className={cn("h-1.5 bg-slate-700 rounded-full overflow-hidden", className, trackClassName)}>
+  <div
+     className={cn("h-full rounded-full transition-all", TONE_BAR[tone])}
+      style={{ width: `${pct}%` }}
+     />
++   </div>
   );
 }
 

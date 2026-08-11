@@ -1,0 +1,14 @@
+services:
+  shakti-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - VITE_CONTROL_PLANE_URL=http://localhost:8000
+      - VITE_BUCKET_SERVICE_URL=http://localhost:8001
+      - VITE_INSIGHTFLOW_URL=http://localhost:8002
+      - VITE_NIYANTRAN_URL=http://localhost:5000
+      - VITE_PRANA_SERVICE_URL=http://localhost:8003
+    restart: unless-stopped

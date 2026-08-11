@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-08-10T12:00:00Z",
+  "total_artifacts": 1,
+  "artifacts": [
+    {
+      "artifact_id": "art-99481a03",
+      "artifact_type": "decision_proof",
+      "trace_id": "550e8400-e29b-41d4-a716-446655440000",
+      "producer_service": "SARATHI_EXECUTION_ENGINE",
+      "timestamp_utc": "2026-08-10T11:58:30Z",
+      "hash_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata": {
+        "verified": true,
+        "integrity_check": "PASSED"
+      }
+    }
+  ]
+}

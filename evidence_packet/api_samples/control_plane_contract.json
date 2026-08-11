@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "services": {
+    "controlPlane": [
+      { "path": "/health", "method": "GET", "clientFn": "fetchHealth" },
+      { "path": "/system/status", "method": "GET", "clientFn": "fetchSystemStatus" },
+      { "path": "/metrics", "method": "GET", "clientFn": "fetchMetrics" },
+      { "path": "/dashboard/executive", "method": "GET", "clientFn": "fetchExecutiveDashboard" },
+      { "path": "/dashboard/operations", "method": "GET", "clientFn": "fetchOperationsDashboard" },
+      { "path": "/dashboard/alerts", "method": "GET", "clientFn": "fetchAlertsDashboard" },
+      { "path": "/dashboard/runtime", "method": "GET", "clientFn": "fetchRuntimeDashboard" },
+      { "path": "/dashboard/telemetry", "method": "GET", "clientFn": "fetchTelemetryDashboard" },
+      { "path": "/registry/repositories", "method": "GET", "clientFn": "fetchRepositoryRegistry" },
+      { "path": "/registry/builds", "method": "GET", "clientFn": "fetchBuildRegistry" },
+      { "path": "/registry/capabilities", "method": "GET", "clientFn": "fetchCapabilityRegistry" },
+      { "path": "/registry/executions", "method": "GET", "clientFn": "fetchExecutionRegistry" },
+      { "path": "/registry/replays", "method": "GET", "clientFn": "fetchReplayRegistry" }
+    ],
+    "bucket": [
+      { "path": "/bucket/artifacts", "method": "GET", "clientFn": "fetchBucketArtifacts" },
+      { "path": "/bucket/storage-stats", "method": "GET", "clientFn": "fetchBucketStorageStats" },
+      { "path": "/bucket/chain-state", "method": "GET", "clientFn": "fetchBucketChainState" },
+      { "path": "/audit/recent", "method": "GET", "clientFn": "fetchAuditRecent" },
+      { "path": "/constitutional/status", "method": "GET", "clientFn": "fetchConstitutionalStatus" }
+    ],
+    "insightflow": [
+      { "path": "/health", "method": "GET", "clientFn": "fetchInsightFlowHealth" },
+      { "path": "/stage-metrics", "method": "GET", "clientFn": "fetchInsightFlowStageMetrics" },
+      { "path": "/bucket/status", "method": "GET", "clientFn": "fetchInsightFlowBucketStatus" }
+    ],
+    "niyantran": [
+      { "path": "/api/dashboard/stats", "method": "GET", "clientFn": "fetchNiyantranStats" },
+      { "path": "/api/dashboard/attendance-summary", "method": "GET", "clientFn": "fetchNiyantranAttendanceSummary" },
+      { "path": "/api/dashboard/leaderboard", "method": "GET", "clientFn": "fetchNiyantranLeaderboard" },
+      { "path": "/api/aims", "method": "GET", "clientFn": "fetchNiyantranAims" }
+    ],
+    "prana": [
+      { "path": "/health", "method": "GET", "clientFn": "fetchPranaHealth" },
+      { "path": "/prana/propagation-log", "method": "GET", "clientFn": "fetchPranaPropagationLog" }
+    ]
+  }
+}
